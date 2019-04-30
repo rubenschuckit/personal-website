@@ -1,0 +1,28 @@
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+.row {
+  padding: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@include media-breakpoint-down(sm) {
+  // Center text and images on small devices
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  p {
+    text-align: center
+  }
+
+  // When class is applied, the element is hidden on small devices
+  .hide-on-small {
+    display: none;
+  }
+}
