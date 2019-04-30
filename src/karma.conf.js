@@ -1,6 +1,9 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -10,8 +13,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-phantomjs-launcher'),
+      require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
@@ -27,7 +29,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     //browsers: ['Chrome'],
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadless'],
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered
       // (useful if karma exits without killing phantom)
