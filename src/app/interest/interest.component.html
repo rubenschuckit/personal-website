@@ -1,14 +1,12 @@
 <div class="container">
-  <h2 class="text-center">Viola</h2>
+  <h2 class="text-center">{{ title }}</h2>
   <div class="row">
-    <div class="col-md-1 hide-on-small background-color">
-    </div>
+    <div class="col-md-1 hide-on-small background-color"></div>
     <div class="col-md-6">
-      <p>I began playing viola in 6th grade and still play today. I put most of my performances on my
-        <a href="https://www.youtube.com/user/rschuckit" target="_blank">YouTube Channel</a>.</p>
+      <ng-content></ng-content>
     </div>
     <div class="col-md-5">
-      <img src="../../assets/images/viola_playing.jpg"/>
+      <img src="../../assets/images/{{ imageName }}"/>
     </div>
   </div>
 </div>
