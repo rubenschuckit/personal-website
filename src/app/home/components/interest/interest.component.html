@@ -1,0 +1,33 @@
+<!-- Can't have two <ng-content> in template, so refer to it in template and place in template outlet -->
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
+
+<hr>
+<div class="container">
+  <h2 class="text-center">{{ title }}</h2>
+
+  <ng-container *ngIf="count % 2 === 0; else odd">
+    <div class="row">
+      <div [style.background-color]="backgroundColor" class="col-md-1 hide-on-small"></div>
+      <div class="col-md-6">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </div>
+      <div class="col-md-5">
+        <img src="../../assets/images/{{ imageFileName }}"/>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #odd>
+    <div class="row">
+      <div class="col-md-5">
+        <img src="../../assets/images/{{ imageFileName }}"/>
+      </div>
+      <div class="col-md-6">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+      </div>
+      <div [style.background-color]="backgroundColor" class="col-md-1 hide-on-small"></div>
+    </div>
+  </ng-template>
+</div>

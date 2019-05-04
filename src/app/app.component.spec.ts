@@ -1,8 +1,8 @@
-import {async, TestBed} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {NavbarComponent} from "./navbar/navbar.component";
-import {AboutMeComponent} from "./about-me/about-me.component";
-import {InterestComponent} from "./interest/interest.component";
+import { async, TestBed } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutMeComponent } from './home/components/about-me/about-me.component';
+import { InterestComponent } from './home/components/interest/interest.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

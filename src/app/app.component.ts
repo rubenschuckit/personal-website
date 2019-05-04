@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {Link} from "./navbar/navbar.interface";
-import {Links} from "./app.config";
+import { Component, OnInit } from '@angular/core';
+import { Link } from './navbar/navbar.interface';
+import { Links } from './app.config';
 
 @Component({
   selector: 'app-root',
