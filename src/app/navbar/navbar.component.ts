@@ -16,8 +16,4 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLinkClick(route: string) {
-    console.log(route);
-  }
-
 }

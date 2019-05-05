@@ -9,7 +9,11 @@ export class InterestComponent implements OnInit {
   static backgroundColors: string[] = [
     '#BBF2D3',
     '#025E73',
-    '#BDD9B0'
+    '#BDD9B0',
+    '#98B5AB',
+    '#2A6652',
+    '#7AFFD2',
+    '#B24B32'
   ];
 
   @Input() count: number;

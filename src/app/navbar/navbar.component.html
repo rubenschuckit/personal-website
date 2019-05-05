@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">{{ title }}</a>
+  <a class="navbar-brand" routerLink="/">{{ title }}</a>
   <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
           data-target="#navbarNav" data-toggle="collapse" type="button">
     <span class="navbar-toggler-icon"></span>
@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <ng-container *ngFor="let link of links">
-        <li [class.active]="link.active" class="nav-item">
+        <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="{{ link.route }}">{{ link.title }}<span class="sr-only">(current)</span></a>
         </li>
       </ng-container>
