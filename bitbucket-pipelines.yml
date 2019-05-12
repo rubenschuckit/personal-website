@@ -8,7 +8,7 @@ image: amio/node-chrome
 pipelines:
   default:
     - step:
-        name: Build and Tets
+        name: Build and Test
         caches:
           - node
         script: # Modify the commands below to build your repository.
@@ -22,3 +22,4 @@ pipelines:
           - pipe: atlassian/firebase-deploy:0.2.2
             variables:
               FIREBASE_TOKEN: $FIREBASE_TOKEN
+              PROJECT_ID: 'personal-website-e7499'
