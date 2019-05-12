@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./interest.component.scss']
 })
 export class InterestComponent implements OnInit {
+  static staticCount = 0;
   static backgroundColors: string[] = [
     '#BBF2D3',
     '#025E73',
@@ -16,18 +17,26 @@ export class InterestComponent implements OnInit {
     '#B24B32'
   ];
 
-  @Input() count: number;
   @Input() title: string;
   @Input() imageFileName: string;
 
+  isEvenCount: boolean;
   backgroundColor: string;
 
   constructor() {
   }
 
   ngOnInit() {
+    /**
+     * Determine side background color and positioning of column by ordering of component in parent template.
+     * Increment the static count so that next component in order will have incremented value.
+     * Determine isEvenCount by whether lsb is 0 since 0 % 0 -> NaN
+     */
+    // tslint:disable-next-line:no-bitwise
+    this.isEvenCount = (InterestComponent.staticCount & 1) === 0;
     this.backgroundColor =
-      InterestComponent.backgroundColors[this.count % InterestComponent.backgroundColors.length];
+      InterestComponent.backgroundColors
+        [InterestComponent.staticCount++ % InterestComponent.backgroundColors.length];
   }
 
 }
