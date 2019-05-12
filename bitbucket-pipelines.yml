@@ -8,7 +8,7 @@ image: amio/node-chrome
 pipelines:
   default:
     - step:
-        name: Build and Test
+        name: Build and test
         caches:
           - node
         script: # Modify the commands below to build your repository.
@@ -17,12 +17,13 @@ pipelines:
           - npm run build
         artifacts: # defining the artifacts to be passed to each future step.
           - dist/**
-    - step:
-        name: Deploy to test
-        deployment: test
-        script:
-          - ls
-          - pipe: atlassian/firebase-deploy:0.2.2
-            variables:
-              FIREBASE_TOKEN: $FIREBASE_TOKEN
-              PROJECT_ID: 'personal-website-e7499'
+  branches:
+    master:
+      - step:
+          name: Deploy to production
+          deployment: test
+          script:
+            - pipe: atlassian/firebase-deploy:0.2.2
+              variables:
+                FIREBASE_TOKEN: $FIREBASE_TOKEN
+                PROJECT_ID: $PROJECT_ID
