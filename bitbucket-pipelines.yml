@@ -19,6 +19,7 @@ pipelines:
         name: Deploy to test
         deployment: test
         script:
+          - ls
           - pipe: atlassian/firebase-deploy:0.2.2
             variables:
               FIREBASE_TOKEN: $FIREBASE_TOKEN
