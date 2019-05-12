@@ -17,12 +17,16 @@ pipelines:
           - npm run test
     - step:
         name: Build
+        caches:
+          - node
         script:
           - npm run build
         artifacts: # defining the artifacts to be passed to each future step.
           - dist/**
     - step:
         name: Deploy to production
+        caches:
+          - node
         deployment: test
         script:
           - pipe: atlassian/firebase-deploy:0.2.2
