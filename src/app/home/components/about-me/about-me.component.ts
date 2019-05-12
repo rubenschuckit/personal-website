@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
-  randomNumber = Math.random() * 10 + 1;
+  randomNumber = Math.trunc(Math.random() * 10 + 1);
 
   constructor() {
   }
