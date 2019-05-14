@@ -1,15 +1,21 @@
-<h3><a id="Motivation_1"></a>Motivation</h3>
-<p>The point of making this site is to explore new engineering practices, and because I wanted to gain more experience
-  in responsive web design as well as set up a CI/CD pipeline.</p>
-<h3><a id="Technologies_4"></a>Technologies</h3>
-<p>The site is made with <em>Angular</em> and uses all custom components I’ve created except for the <em>Bootstrap</em>
-  navbar (and layout/grid). The Git repository is hosted by <em>Bitbucket</em> where all of my source code is public and
-  available for <a href="https://bitbucket.org/rschuckit">viewing</a>, and I make use of their integrated pipeline
-  functionality. The build is run in a <em>Docker</em> container and is deployed to <em>Firebase Hosting</em>. Their is
-  test coverage, and a merge to master with all passing tests triggers a deployment to production. This documentation is
-  generated from a Markdown file I wrote and is translated to HTML. I go into full details below.</p>
-<h3><a id="CICD_Pipeline_7"></a>CI/CD Pipeline</h3>
-<p>One of the driving motivations for this site was to setup a CI/CD pipeline. I chose to make use of Bitbucket’s
-  pipeline solution. When a commit is pushed, the tests are run to determine if the build is successful or not. When a
-  commit is merged into master, the tests are run and a deployment is started.</p>
-<p><img alt="Pipeline Steps" src="https://i.imgur.com/iDiwe2s.png"></p>
+<div class="container pt-3">
+  <h3><a id="Motivation_1"></a>Motivation</h3>
+  <p>The point of making this site is to explore new engineering practices, and because I wanted to gain more experience
+    in responsive web design as well as set up a CI/CD pipeline.</p>
+  <h3><a id="Technologies_4"></a>Technologies</h3>
+  <p>The site is made with <em>Angular</em> and uses all custom components I’ve created except for the
+    <em>Bootstrap</em>
+    navbar (and layout/grid). The Git repository is hosted by <em>Bitbucket</em> where all of my source code is public
+    and
+    available for <a href="https://bitbucket.org/rschuckit">viewing</a>, and I make use of their integrated pipeline
+    functionality. The build is run in a <em>Docker</em> container and is deployed to <em>Firebase Hosting</em>. Their
+    is
+    test coverage, and a merge to master with all passing tests triggers a deployment to production. This documentation
+    is
+    generated from a Markdown file I wrote and is translated to HTML. I go into full details below.</p>
+  <h3><a id="CICD_Pipeline_7"></a>CI/CD Pipeline</h3>
+  <p>One of the driving motivations for this site was to setup a CI/CD pipeline. I chose to make use of Bitbucket’s
+    pipeline solution. When a commit is pushed, the tests are run to determine if the build is successful or not. When a
+    commit is merged into master, the tests are run and a deployment is started.</p>
+  <p><img alt="Pipeline Steps" src="https://i.imgur.com/iDiwe2s.png"></p>
+</div>
