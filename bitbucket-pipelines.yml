@@ -1,18 +1,21 @@
-# This is a sample build configuration for JavaScript.
-# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
 image: amio/node-chrome
 
 pipelines:
+  default: # For all branches other than master, run tests to determine successful build.
+    - step:
+        name: Test
+        caches:
+          - node
+        script:
+          - npm install
+          - npm run test
   branches:
     master:
     - step:
         name: Test
         caches:
           - node
-        script: # Modify the commands below to build your repository.
+        script:
           - npm install
           - npm run test
     - step:
@@ -21,7 +24,7 @@ pipelines:
           - node
         script:
           - npm run build
-        artifacts: # defining the artifacts to be passed to each future step.
+        artifacts: # defining the artifacts to be passed to future step.
           - dist/**
     - step:
         name: Deploy to production
