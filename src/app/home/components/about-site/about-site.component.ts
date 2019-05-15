@@ -16,9 +16,7 @@ export class AboutSiteComponent implements OnInit {
   ngOnInit() {
     this.httpClient.get('assets/markdown/about.md', { responseType: 'text' }).subscribe(text => {
       const converter = new showdown.Converter();
-      const html = converter.makeHtml(text);
-      console.log(html);
-      this.content = html;
+      this.content = converter.makeHtml(text);
     });
   }
 
