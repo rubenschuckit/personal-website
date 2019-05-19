@@ -8,7 +8,6 @@ import { Links } from './app.config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'personal-website hi there!';
   links: Link[] = Links;
 
   ngOnInit() {
