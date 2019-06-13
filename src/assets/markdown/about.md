@@ -43,5 +43,5 @@ on a mobile device, you won't see the colors (since they take up too much space)
 
 ### Acknowledgments 
 The photo of me playing viola was taken by Hongda Zeng. Although often confused as a profesional
-photographer, he is *merely* a software engineer too. 
+photographer, he is a software engineer too. 
 The photo of Chicago on my homepage is by [Chait Goli](https://www.pexels.com/photo/aerial-shot-of-buildings-1823680/).
