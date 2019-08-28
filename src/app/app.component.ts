@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from './navbar/navbar.interface';
 import { Links } from './app.config';
-import { Gtag } from 'angular-gtag';
+import { NavigationEnd, Router } from '@angular/router';
 
 declare const ga;
 
@@ -13,7 +13,13 @@ declare const ga;
 export class AppComponent implements OnInit {
   links: Link[] = Links;
 
-  constructor(gtag: Gtag) {
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
   }
 
   ngOnInit() {
