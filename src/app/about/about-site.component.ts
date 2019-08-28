@@ -14,10 +14,12 @@ export class AboutSiteComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.httpClient.get('assets/markdown/about.md', { responseType: 'text' }).subscribe(text => {
-      const converter = new showdown.Converter();
-      this.content = converter.makeHtml(text);
-    });
+    if (!this.content) {
+      this.httpClient.get('assets/markdown/about.md', { responseType: 'text' }).subscribe(text => {
+        const converter = new showdown.Converter();
+        this.content = converter.makeHtml(text);
+      });
+    }
   }
 
 }

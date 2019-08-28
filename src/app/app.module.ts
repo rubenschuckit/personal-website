@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GtagModule.forRoot({ trackingId: 'UA-146560321-1', trackPageviews: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
