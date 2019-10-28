@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import * as showdown from 'showdown';
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import * as showdown from "showdown";
 
 @Component({
   selector: 'app-about-site',
@@ -21,5 +21,4 @@ export class AboutSiteComponent implements OnInit {
       });
     }
   }
-
 }
