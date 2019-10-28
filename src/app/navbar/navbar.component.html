@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <ng-container *ngFor="let link of links">
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item" data-target=".navbar-collapse.show" data-toggle="collapse" routerLinkActive="active">
           <a class="nav-link" routerLink="{{ link.route }}">{{ link.title }}<span class="sr-only">(current)</span></a>
         </li>
       </ng-container>
