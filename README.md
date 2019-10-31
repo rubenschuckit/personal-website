@@ -1,4 +1,5 @@
-# PersonalWebsite
+# Personal Website
+![](https://github.com/rubenschuckit/personal-website/workflows/Test%20Build%20Deploy/badge.svg)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
