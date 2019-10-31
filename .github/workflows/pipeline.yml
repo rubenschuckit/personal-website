@@ -20,12 +20,21 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Archive Node Modules
+        uses: actions/upload-artifact@master
+        with:
+          name: node_modules
+          path: node_modules
   test:
     name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: node_modules
       - name: Test
         run: npm run test
   deploy:
