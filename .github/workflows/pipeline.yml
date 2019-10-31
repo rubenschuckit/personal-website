@@ -13,7 +13,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
@@ -30,7 +30,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
