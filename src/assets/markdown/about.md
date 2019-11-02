@@ -32,7 +32,7 @@ component declaration looks like
 <app-interest imageFileName="viola.jpg" title="Viola">
   <p class="text-sm-center text-md-left">
     I began playing viola in 6th grade and still play today. I put most of my performances on my
-    <a href="https://www.youtube.com/user/rschuckit" target="_blank">YouTube Channel</a>.
+    <a href="https://www.youtube.com/user/rschuckit" target="_blank" rel="noopener">YouTube Channel</a>.
   </p>
 </app-interest>
 ```
