@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-2 mb-3">
-      <img src="../../../../assets/images/my_picture.jpg"/>
+      <picture>
+        <source media="(min-width: 768px)" srcset="/assets/images/my_picture.jpg">
+        <img class="rounded" src="/assets/images/my_picture_small.jpg">
+      </picture>
     </div>
     <div class="col-sm-12 col-md-5">
       <p class="text-center text-md-left">Hi there! I'm Ruben Schuckit, and I'm a software engineer at
@@ -12,7 +15,7 @@
         <a href="https://www.linkedin.com/in/schuckit/" rel="noopener" target="_blank">LinkedIn page</a>.</p>
     </div>
     <div class="col-sm-12 col-md-5 d-none d-md-block">
-      <img src="../../../../assets/images/chicago.jpg"/>
+      <img src="/assets/images/chicago.jpg"/>
     </div>
   </div>
 </div>
