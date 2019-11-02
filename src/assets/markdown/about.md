@@ -1,3 +1,4 @@
+
 # About This Site
 
 ### Motivation  
@@ -5,16 +6,15 @@ The point of making this site is to explore new engineering practices, and becau
   
 ### Technologies  
 The site is made with **Angular** and uses all custom components I've created except for the **Bootstrap** navbar (and layout/grid). 
-The Git repository is hosted by **Bitbucket** where all of my source code is public and available for [viewing](https://bitbucket.org/rschuckit), 
-and I make use of their integrated pipeline functionality. The build is run in a **Docker** container and is deployed to **Firebase Hosting**. 
-There is test coverage, and a merge to master with all passing tests triggers a deployment to "production." 
-This documentation is generated from a Markdown file I wrote and is translated to HTML using the **Showdown** library. 
+The Git repository is hosted by **GitHub** (formerly it was on Bitbucket) where all of my source code is public and available for [viewing](https://github.com/rubenschuckit/personal-website), 
+and I make use of their integrated pipeline functionality through **GitHub Actions**. The site is deployed to **Firebase Hosting**. 
+There is test coverage, and a merge to master with all passing tests triggers a deployment. This may seem like overkill, but it's actually super convenient to make changes, test them, and then just push and have the site re-deployed. This documentation is generated from a Markdown file I wrote and is translated to HTML using the **ngx-markdown** library. 
 
 ### CI/CD Pipeline 
-One of the driving motivations for this site was to setup a CI/CD pipeline. I chose to make use of Bitbucket's pipeline solution. 
+One of the driving motivations for this site was to setup a CI/CD pipeline. I chose to make use of GitHub's new pipeline solution via GitHub Actions. 
 When a commit is pushed, the tests are run to determine if the build is successful or not. When a commit is merged into master, the tests are run and a deployment is started. 
 
-![Pipeline Steps](https://i.imgur.com/iDiwe2s.png)
+![Pipeline Steps](https://i.imgur.com/lKQ2ItD.png)
 
 ## Angular Components
 
