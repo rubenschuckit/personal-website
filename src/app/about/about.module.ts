@@ -5,8 +5,13 @@ import { MarkdownModule } from "ngx-markdown";
 import { HttpClient } from "@angular/common/http";
 
 @NgModule({
-  declarations: [AboutSiteComponent],
-  imports: [CommonModule, MarkdownModule.forRoot({ loader: HttpClient })]
+  declarations: [
+    AboutSiteComponent
+  ],
+  imports: [
+    CommonModule,
+    MarkdownModule.forRoot({ loader: HttpClient })
+  ]
 })
 export class AboutModule {
 }
