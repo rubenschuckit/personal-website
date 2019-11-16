@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AboutSiteComponent } from './about-site.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AboutSiteComponent } from "./about-site.component";
+import { HttpClientModule } from "@angular/common/http";
 
 describe('AboutSiteComponent', () => {
   let component: AboutSiteComponent;
@@ -10,9 +10,8 @@ describe('AboutSiteComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AboutSiteComponent],
-      imports: [HttpClientModule]
-    })
-      .compileComponents();
+      imports: [HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

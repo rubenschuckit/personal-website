@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { InterestComponent } from './components/interest/interest.component';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { InterestComponent } from "./components/interest/interest.component";
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,6 @@ import { InterestComponent } from './components/interest/interest.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
   constructor() {
   }
 
@@ -18,5 +17,4 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     InterestComponent.staticCount = 0;
   }
-
 }

@@ -16,6 +16,23 @@ When a commit is pushed, the tests are run to determine if the build is successf
 
 ![Pipeline Steps](https://i.imgur.com/lKQ2ItD.png)
 
+### Depfu
+One of the benefits of switching to Github is I can make use of their rich plugin ecosystem. The first I'm taking advantage of is [Depfu](https://depfu.com/). Keeping up to date with dependencies can be pretty tricky even with semantic versioning tools in NPM. 
+So Depfu automatically creates a PR when there are updates that can be made on a weekly basis.
+
+![Pull Request form Depfu](https://i.imgur.com/A9wKGQa.png)
+
+As you can see, it even thoughtfully deletes the branch once it's merged in. 
+
+GitHub Actions was extra handy in this case because one of the dependencies it tired to update caused the build and tests to fail as evidence by the red 'x' on the right.
+
+![Failed PR](https://i.imgur.com/4SgXwh4.png)
+
+Turns out, Angular compiler doesn't yet support the most up-to-date version of TypeScript. There's already an issue opened on the Angular repo and they'll add support soon.
+Getting around this is easy with Depfu. You just pause the update on any dependency you want and it won't be included in package.json updates.
+
+![Paused TypeScript Update](https://i.imgur.com/gEESjfM.png)
+
 ## Angular Components
 
 ### Interest Component

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: 'app-interest',
@@ -7,15 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InterestComponent implements OnInit {
   static staticCount = 0;
-  static backgroundColors: string[] = [
-    '#BBF2D3',
-    '#025E73',
-    '#BDD9B0',
-    '#98B5AB',
-    '#2A6652',
-    '#7AFFD2',
-    '#B24B32'
-  ];
+  static backgroundColors: string[] = ["#BBF2D3", "#025E73", "#BDD9B0", "#98B5AB", "#2A6652", "#7AFFD2", "#B24B32"];
 
   @Input() title: string;
   @Input() imageFileName: string;
@@ -35,8 +27,6 @@ export class InterestComponent implements OnInit {
     // tslint:disable-next-line:no-bitwise
     this.isEvenCount = (InterestComponent.staticCount & 1) === 0;
     this.backgroundColor =
-      InterestComponent.backgroundColors
-        [InterestComponent.staticCount++ % InterestComponent.backgroundColors.length];
+      InterestComponent.backgroundColors[InterestComponent.staticCount++ % InterestComponent.backgroundColors.length];
   }
-
 }

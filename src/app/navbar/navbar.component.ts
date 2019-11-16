@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Link } from './navbar.interface';
+import { Component, Input, OnInit } from "@angular/core";
+import { Link } from "./navbar.interface";
 
 @Component({
   selector: 'app-navbar',
@@ -15,5 +15,4 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

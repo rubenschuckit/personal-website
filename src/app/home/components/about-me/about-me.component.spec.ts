@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AboutMeComponent } from './about-me.component';
+import { AboutMeComponent } from "./about-me.component";
 
 describe('AboutMeComponent', () => {
   let component: AboutMeComponent;
@@ -9,8 +9,7 @@ describe('AboutMeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AboutMeComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -28,5 +27,4 @@ describe('AboutMeComponent', () => {
     expect(comp.randomNumber).toBeGreaterThan(0);
     expect(comp.randomNumber).toBeLessThanOrEqual(10);
   });
-
 });

@@ -1,7 +1,7 @@
-<hr>
+<hr/>
 <div class="container">
   <h2 class="text-center">{{ title }}</h2>
-  <div [ngClass]="{'flex-row-reverse': !isEvenCount}" class="row">
+  <div [ngClass]="{ 'flex-row-reverse': !isEvenCount }" class="row">
     <div [style.background-color]="backgroundColor" class="col-md-1 d-none d-md-block"></div>
     <div class="col-md-6">
       <ng-content></ng-content>
