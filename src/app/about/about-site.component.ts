@@ -7,7 +7,6 @@ import { SpinnerService } from "../navbar/spinner.service";
   styleUrls: ['./about-site.component.css']
 })
 export class AboutSiteComponent implements OnInit {
-
   constructor(private spinnerService: SpinnerService) {
   }
 

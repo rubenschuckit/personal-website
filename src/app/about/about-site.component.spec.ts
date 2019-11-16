@@ -12,8 +12,7 @@ describe('AboutSiteComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AboutSiteComponent],
       imports: [HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test-pipeline": "ng test --no-watch"
+    "test-pipeline": "ng test --no-watch",
+    "prettier": "prettier --write \"src/**/*.{ts, html}\""
   },
   "private": true,
   "dependencies": {
