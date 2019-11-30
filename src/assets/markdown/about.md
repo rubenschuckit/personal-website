@@ -62,6 +62,6 @@ on a mobile device, you won't see the colors (since they take up too much space)
 I'd like to implement SSR at some point. This site is basically completely static (no API calls whatsoever), so why should your browser do all the heavy lifting? Especially everyone translating MD to HTML in their browsers even though this work could be done once. Prerendering isn't super straightforward right now in Angular (correct me if I'm wrong). As another alternative I might look into a framework that has prerendering built in like Preact. 
 
 ### Acknowledgments 
-The photo of me playing viola was taken by Hongda Zeng. Although often confused as a profesional
+The photo of me playing viola was taken by Hongda Zeng. Although often confused as a professional
 photographer, he is a software engineer too. 
 The photo of Chicago on my homepage is by [Chait Goli](https://www.pexels.com/photo/aerial-shot-of-buildings-1823680/).
