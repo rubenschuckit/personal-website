@@ -5,11 +5,13 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { CommonModule } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { BlogComponent } from "./blog/blog.component";
+import { MarkdownModule } from "ngx-markdown";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
-  imports: [BrowserModule, CommonModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, NavbarComponent, BlogComponent],
+  imports: [BrowserModule, CommonModule, AppRoutingModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient })],
   providers: [],
   bootstrap: [AppComponent]
 })
