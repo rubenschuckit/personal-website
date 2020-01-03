@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { Link } from "./navbar/navbar.interface";
-import { Links } from "./app.config";
-import { NavigationEnd, Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Link } from './navbar/navbar.interface';
+import { Links } from './app.config';
+import { NavigationEnd, Router } from '@angular/router';
 
 declare const ga;
 
@@ -22,6 +22,5 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

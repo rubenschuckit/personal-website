@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -8,9 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class AboutMeComponent implements OnInit {
   randomNumber = Math.trunc(Math.random() * 10 + 1);
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
