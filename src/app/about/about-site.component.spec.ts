@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutSiteComponent } from "./about-site.component";
-import { MarkdownModule } from "ngx-markdown";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { AboutSiteComponent } from './about-site.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('AboutSiteComponent', () => {
   let component: AboutSiteComponent;
