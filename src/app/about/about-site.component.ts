@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { SpinnerService } from '../navbar/spinner.service';
+import { Component, OnInit } from "@angular/core";
+import { SpinnerService } from "../navbar/spinner.service";
 
 @Component({
   selector: 'app-about-site',
@@ -7,7 +7,8 @@ import { SpinnerService } from '../navbar/spinner.service';
   styleUrls: ['./about-site.component.css']
 })
 export class AboutSiteComponent implements OnInit {
-  constructor(private spinnerService: SpinnerService) {}
+  constructor(private spinnerService: SpinnerService) {
+  }
 
   ngOnInit() {
     this.spinnerService.startSpinner();

@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { InterestComponent } from './components/interest/interest.component';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { InterestComponent } from "./components/interest/interest.component";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,11 @@ import { InterestComponent } from './components/interest/interest.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   // When the component is destroyed, reset count so that when it is recreated the index starts at 0.
   ngOnDestroy(): void {
