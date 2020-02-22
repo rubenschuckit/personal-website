@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,7 +16,7 @@ import { MarkdownModule } from 'ngx-markdown';
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient })
+    MarkdownModule.forRoot({ sanitize: SecurityContext.NONE, loader: HttpClient })
   ],
   providers: [],
   bootstrap: [AppComponent]
